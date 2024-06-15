@@ -1,6 +1,6 @@
 package controlador;
 
-import java.util.List;
+import java.util.List;  
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -26,7 +26,7 @@ public class PacienteControlador {
 	@GetMapping
 	public List<Paciente> listarPacientes(){
 		   return pacienteservice.findAll();
-		}
+	}
 	@PutMapping
 	public Paciente atualizarpaciente(@RequestBody Paciente paciente) {
 		return pacienteservice.update(paciente);
